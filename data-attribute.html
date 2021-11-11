@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Attribute</title>
+    <link rel="stylesheet" href="https://use.typekit.net/sim1jlw.css">
+    <style>
+
+        :root {
+            --dark-color: #635bff;
+            --light-color: #80e9ff;
+        }
+    
+        svg {
+            cursor: pointer;
+        }
+
+        #darkGroup {
+            fill: var(--dark-color);
+        }
+        #lightGroup {
+            fill: var(--light-color);
+        }
+        #dark1,
+        #light1,
+        #dark2 {
+            transition: all 1s ease;
+        }
+        #dark2 {
+            transform: translateX(-100%);
+        }
+        svg:hover #light1 {
+            transform: translateX(20%);
+        }
+        svg:hover #dark1 {
+            transform: translateX(40%);
+        opacity: 0;
+        }
+        svg:hover #dark2 {
+            transform: translateX(0%);
+        }
+
+
+        
+
+
+        body{
+            font-family: 'Museo Sans', sans-serif;
+            color:#333;
+            padding: 0;
+            margin: 0;
+            font-size: 62.5%;
+            background: linear-gradient(90deg, #fff 21px, transparent 1%) center, linear-gradient(#fff 21px, transparent 1%) center, #999;
+            background-size: 22px 22px;
+        }
+
+        h1{
+            font-size: 3rem;
+            color:#6f0fdd;
+            background-image: linear-gradient(45deg, rgb(37, 47, 255) -100%, rgb(37, 106, 243) -50%, rgb(124, 192, 226) 0%, rgb(37, 106, 243) 50%, rgb(37, 47, 255) 100%);
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            padding-bottom: 5px;
+            margin-bottom: -5px;
+            font-weight: 500;
+        }
+
+        h2{
+            font-size: 2rem;
+            color:#390866;
+            font-weight: 400;
+        }
+
+        h1, h2{
+            cursor: pointer;
+            transition: all 0.1s linear;
+            border-right: 0px solid #6f0fdd;
+            padding-left:0;
+        }
+
+        h1:hover, h2:hover{
+            border-right: 50px solid #6f0fdd;
+            transition: all 0.2s linear;
+            padding-left:2rem;
+        }
+
+        .topo{
+            padding: 1rem;
+            background: linear-gradient(to right, blueviolet, rgb(9, 9, 110));
+            color:#fff;
+            font-size: 1rem;
+        }
+
+        .wrapper{
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        .get-click{
+            border:1px solid #ddd;
+            border-radius: 3px;
+            max-width: calc(50%);
+            padding: 1rem;
+        }
+
+        /* BUTTON EFFECT */
+        .btn-trocaprod {
+            background: #3498db;
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            border-radius: 3px;
+            font-family: Arial;
+            color: #ffffff !important;
+            font-size: 15px !important;
+            padding: 7px 10px;
+            text-decoration: none;
+        }
+        
+        .box{
+          --width-button:260px;
+          --dark-color: #fff;
+          --light-color: #ffcc20;
+        }
+        
+        
+        .btn-shine {
+            padding: 6px 0px;
+            color: #fff;
+            font-family: Arial;
+            background-color:#333;
+            background: linear-gradient(to right, #186ea8 0, #ffffff 10%, #3498db 20%);
+            background-position: 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s infinite linear;
+            animation-fill-mode: forwards;
+            -webkit-text-size-adjust: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            white-space: nowrap;
+            border: 1px solid #3498db;
+            border-radius:3px;
+            transition:all 0.2s ease;
+            box-shadow:1px 1px 4px rgba(0,0,0,0.2);
+            min-width: var(--width-button);
+            text-align:center;
+          
+        }
+        
+        .btn-destaque {
+            padding: 6px 10px;
+            font-family: Arial;
+            background-color:#3498db;
+            -webkit-text-size-adjust: none;
+            height: 30px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            white-space: nowrap;
+            border: 1px solid #3498db;
+            border-radius:3px;
+            transition:all 0.2s ease;
+            box-shadow:1px 1px 4px rgba(0,0,0,0.2);
+            min-width: var(--width-button);
+            width: 260px;
+            text-align:center;
+            color:#fff;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .btn-destaque  svg {
+            cursor: pointer;
+            max-width: 40px;
+        }
+
+        .btn-destaque  #darkGroup {
+            fill: var(--dark-color);
+        }
+        .btn-destaque   #lightGroup {
+            fill: var(--light-color);
+        }
+        .btn-destaque  #dark1,
+        .btn-destaque  #light1,
+        .btn-destaque  #dark2 {
+            transition: all 1s ease;
+        }
+        .btn-destaque  #dark2 {
+            transform: translateX(-100%);
+        }
+        .btn-destaque:hover svg #light1 {
+            transform: translateX(20%);
+        }
+        .btn-destaque:hover svg #dark1 {
+            transform: translateX(40%);
+            opacity: 0;
+        }
+        .btn-destaque:hover svg #dark2 {
+            transform: translateX(0%);
+        }
+        
+        .btn-shine:hover{
+          background:#3498db !important;
+          color:#fff;
+          -webkit-background-clip: none;
+          -webkit-text-fill-color: #fff;
+          transition:all 0.7s ease;
+          flex-direction:column;
+        }
+        
+        
+        @keyframes shine {
+          0% {
+            background-position: 0px;
+          }
+          100% {
+            background-position: var(--width-button);
+          }
+        }
+        @keyframes shine2 {
+          0% {
+            background-position: 0px;
+          }
+          100% {
+            background-position: var(--width-button);
+          }
+        }
+        
+        .box{
+          display:flex;
+          flex-wrap: wrap;
+          align-items:center;
+          justify-content:center;
+          height:400px;
+          width:100%;
+          border:1px solid #ddd;
+          border-radius:5px;
+          max-width:800px;
+          position:relative;
+          margin: 20px auto;
+          background: #fff;
+          justify-content: space-around;
+          flex-direction: column;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <header class="topo">
+        Navegação Aqui com Listas em HTML
+    </header>
+
+    <section class="wrapper">
+        <h1 data-email="stephen@hawking.com" onclick="viewEmail(this)">Stephen Hawking</h1>
+        <h2 data-email="albert@einstein.com" onclick="viewEmail(this)">Albert Einstein</h2>   
+        <div class="get-click">
+            Aqui entra o Resultado do Clique.
+        </div> 
+        <p>&nbsp;</p>
+        <h3>Animation CSS SVG</h3>
+        <svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="arrowGroup">
+              <g id="lightGroup">
+                <path
+                  id="light1"
+                  opacity="0.6"
+                  d="M53.4872 46.3509C55.7436 47.6536 55.7436 50.9105 53.4872 52.2132L13.718 75.174C11.4615 76.4767 8.64104 74.8483 8.64104 72.2428L8.64104 26.3213C8.64104 23.7158 11.4616 22.0874 13.718 23.3901L53.4872 46.3509Z"
+                />
+              </g>
+              <g id="darkGroup">
+                <path
+                  id="dark1"
+                  opacity="0.8"
+                  d="M74.9231 46.915C77.1795 48.2177 77.1795 51.4746 74.9231 52.7773L34.3077 76.2266C32.0513 77.5294 29.2308 75.9009 29.2308 73.2955L29.2308 26.3968C29.2308 23.7914 32.0513 22.1629 34.3077 23.4657L74.9231 46.915Z"
+                />
+                <path
+                  id="dark2"
+                  opacity="0.8"
+                  d="M54.6154 46.915C56.8718 48.2177 56.8718 51.4746 54.6154 52.7773L14 76.2266C11.7436 77.5294 8.92307 75.9009 8.92307 73.2955L8.92308 26.3968C8.92308 23.7914 11.7436 22.1629 14 23.4657L54.6154 46.915Z"
+                />
+              </g>
+            </g>
+        </svg>
+            
+    </section>
+
+
+    <div class="box">
+
+        <a href="#" class="btn-trocaprod"> Clique para dica do especialista </a>
+      
+        <a href="#" class="btn-shine"> Clique para dica do especialista </a> 
+        
+        <a href="#" class="btn-destaque"> 
+            <svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="arrowGroup">
+                  <g id="lightGroup">
+                    <path
+                      id="light1"
+                      opacity="0.6"
+                      d="M53.4872 46.3509C55.7436 47.6536 55.7436 50.9105 53.4872 52.2132L13.718 75.174C11.4615 76.4767 8.64104 74.8483 8.64104 72.2428L8.64104 26.3213C8.64104 23.7158 11.4616 22.0874 13.718 23.3901L53.4872 46.3509Z"
+                    />
+                  </g>
+                  <g id="darkGroup">
+                    <path
+                      id="dark1"
+                      opacity="0.8"
+                      d="M74.9231 46.915C77.1795 48.2177 77.1795 51.4746 74.9231 52.7773L34.3077 76.2266C32.0513 77.5294 29.2308 75.9009 29.2308 73.2955L29.2308 26.3968C29.2308 23.7914 32.0513 22.1629 34.3077 23.4657L74.9231 46.915Z"
+                    />
+                    <path
+                      id="dark2"
+                      opacity="0.8"
+                      d="M54.6154 46.915C56.8718 48.2177 56.8718 51.4746 54.6154 52.7773L14 76.2266C11.7436 77.5294 8.92307 75.9009 8.92307 73.2955L8.92308 26.3968C8.92308 23.7914 11.7436 22.1629 14 23.4657L54.6154 46.915Z"
+                    />
+                  </g>
+                </g>
+            </svg>
+            <span>Clique para dicas do especialista </span>
+        </a> 
+        
+    </box>
+
+
+    <script>
+
+        const getClick = document.querySelector(".get-click");
+
+        const viewEmail = (person) => {
+            let person_email = person.getAttribute("data-email");
+            console.log(person_email);
+            getClick.innerHTML =  person_email;
+        }
+
+    </script>
+    
+</body>
+</html>

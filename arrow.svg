@@ -1,0 +1,11 @@
+<svg width="106" height="63" viewBox="0 0 106 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrow">
+<g id="lightGroup">
+<path id="light1" d="M85 31.5L37.75 58.7798L37.75 4.2202L85 31.5Z" fill="#9A95FB" fill-opacity="0.82"/>
+</g>
+<g id="darkGroup">
+<path id="dark1" d="M63 31.5L15.75 58.7798L15.75 4.2202L63 31.5Z" fill="#635BFF"/>
+<path id="dark2" d="M106 31.5L58.75 58.7798L58.75 4.2202L106 31.5Z" fill="#312AB3" fill-opacity="0.73"/>
+</g>
+</g>
+</svg>

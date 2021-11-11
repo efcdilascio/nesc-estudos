@@ -1,0 +1,74 @@
+
+body{
+    padding:0;
+    margin:0; /* top, right, bottom, left */
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+.input-text{
+    border:1px solid #ddd;
+    border-radius: 3px;
+    min-width: 300px;
+    height: 46px;
+    padding: 3px 2px;
+}
+
+#topo{
+    background: #000;
+}
+
+#topo ul{
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+#topo ul li{
+    width: 20%;
+}
+
+#topo ul li a{
+    color:#ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    border-right:1px solid #333;
+}
+
+#topo ul li a:hover{
+    color:#ffcc20;
+    background: #333;;
+}
+
+
+.esconder{
+    display: none;
+}
+
+
+.content{
+    padding:1rem;
+    max-width: 1200px;
+    margin:0 auto; /* top,bottom e auto right, left */
+}
+
+
+
+h1{
+    font-size: 3rem;
+    color:#8a2be2;
+    
+}
+
+
+p{
+    font-size: 1.1rem; /* 16px */
+
+}

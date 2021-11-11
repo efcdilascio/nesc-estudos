@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo HTML/ CSS e Javascript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header id="topo">
+        <ul>
+            <li><a href="#">item1</a></li>
+            <li><a href="#">item2</a></li>
+            <li><a href="#">item3</a></li>
+            <li><a href="#">item4</a></li>
+            <li><a href="#">item5</a></li>
+        </ul>
+    </header>
+
+    <section class="content">
+        <h1>Salesforce Render</h1>
+        <p>Lorem ipsum dolor</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima tenetur neque dicta laborum corporis est provident placeat exercitationem, nesciunt quis deserunt sequi ea aperiam expedita totam voluptatem illo eos fugiat.</p>
+        <input type="text" class="input-text" name="Nome" placeholder="Nome" id="NomeID">
+        <input type="text" name="" id="">
+
+        <div id="box1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, rerum.
+        </div>
+
+        <button id="botao" onclick="hideBox()">Teste</button>
+
+    </section>
+
+    <footer>
+        
+    </footer>
+
+
+    <script>
+
+        var getBox1 = document.querySelector("#box1");
+        var botaoAcao = document.querySelector('#botao');
+
+        function hideBox(){
+            getBox1.classList.add("esconder");
+        }
+
+    </script>
+    
+</body>
+</html>
